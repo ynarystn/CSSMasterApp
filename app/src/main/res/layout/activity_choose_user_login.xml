@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_2"
+    tools:context=".ChooseUserLogin">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <!-- Teacher Picking Image -->
+    <ImageView
+        android:id="@+id/teacher_picking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/teacher_picking"
+        android:contentDescription="Teacher Picking"
+        app:layout_constraintTop_toTopOf="@id/guideline_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/student_picking"
+        app:layout_constraintHorizontal_chainStyle="spread" />
+
+    <!-- Student Picking Image -->
+    <ImageView
+        android:id="@+id/student_picking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/student_picking"
+        android:contentDescription="Student Picking"
+        app:layout_constraintTop_toTopOf="@id/guideline_horizontal"
+        app:layout_constraintStart_toEndOf="@id/teacher_picking"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Teacher Button -->
+    <ImageButton
+        android:id="@+id/teacher_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:contentDescription="Teacher Button"
+        android:src="@drawable/teacher_button"
+        app:layout_constraintEnd_toEndOf="@id/teacher_picking"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="@id/teacher_picking"
+        app:layout_constraintTop_toBottomOf="@id/teacher_picking"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <!-- Student Button -->
+    <ImageButton
+        android:id="@+id/student_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:contentDescription="Student Button"
+        android:src="@drawable/student_button"
+        app:layout_constraintEnd_toEndOf="@id/student_picking"
+        app:layout_constraintStart_toStartOf="@id/student_picking"
+        app:layout_constraintTop_toBottomOf="@id/student_picking"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
