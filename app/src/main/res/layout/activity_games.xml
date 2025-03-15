@@ -31,19 +31,6 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.05" />
 
-    <!-- Back Button -->
-    <ImageButton
-        android:id="@+id/back_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:background="@null"
-        android:scaleType="fitCenter"
-        android:src="@drawable/back_button"
-        app:layout_constraintStart_toStartOf="@id/guideline_vertical"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
-
     <!-- Setting Button -->
     <ImageButton
         android:id="@+id/setting_button"

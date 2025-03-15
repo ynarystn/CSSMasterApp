@@ -35,8 +35,8 @@ open class BottomNav : AppCompatActivity() {
                     true
                 }
                 R.id.nav_tutorials -> {
-                    if (this !is Games) {
-                        startActivity(Intent(this, Games::class.java))
+                    if (this !is Tutorials) {
+                        startActivity(Intent(this, Tutorials::class.java))
                         overridePendingTransition(0, 0)
                         finish()
                     }

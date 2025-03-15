@@ -2,28 +2,32 @@ package com.example.css
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class TeacherDashboard : AppCompatActivity() {
+class TutorialsHardware : BottomNav() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_teacher_dashboard)
+        setContentView(R.layout.activity_tutorials_hardware)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // Set OnClickListener to navigate to TeacherDashboard
-        val viewQuizButton = findViewById<Button>(R.id.btn_view_quiz)
-        viewQuizButton.setOnClickListener {
-            val intent = Intent(this, TeacherViewQuiz::class.java)
+        setupBottomNavigation()
+
+        val backButton = findViewById<ImageButton>(R.id.back_button)
+
+        // Set OnClickListener to navigate to LoginPage
+        backButton.setOnClickListener {
+            val intent = Intent(this, Tutorials::class.java)
             startActivity(intent)
         }
+
     }
 }

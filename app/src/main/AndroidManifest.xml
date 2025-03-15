@@ -13,6 +13,15 @@
         android:theme="@style/Theme.CSS"
         tools:targetApi="31">
         <activity
+            android:name=".TeacherViewQuiz"
+            android:exported="false" />
+        <activity
+            android:name=".TutorialsHardware"
+            android:exported="false" />
+        <activity
+            android:name=".Tutorials"
+            android:exported="false" />
+        <activity
             android:name=".ModuleSoftware"
             android:exported="false" />
         <activity
