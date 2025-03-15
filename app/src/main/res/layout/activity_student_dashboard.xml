@@ -96,11 +96,12 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.66" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/hardware_card_1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:background="@null"
         android:contentDescription="Hardware Course 1"
         android:scaleType="fitXY"
         android:src="@drawable/hardware_card"
@@ -108,13 +109,14 @@
         app:layout_constraintStart_toStartOf="@id/guideline_vertical"
         app:layout_constraintTop_toBottomOf="@id/our_courses" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/software_card"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:background="@null"
         android:contentDescription="Software Course"
         android:scaleType="fitXY"
         android:src="@drawable/software_card"
@@ -122,17 +124,19 @@
         app:layout_constraintStart_toStartOf="@id/guideline_1_3"
         app:layout_constraintTop_toBottomOf="@id/our_courses" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/hardware_card_2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:background="@null"
         android:src="@drawable/hardware_card"
         android:contentDescription="Hardware Course 2"
         android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="@id/guideline_2_3"
         app:layout_constraintEnd_toEndOf="@id/guideline_vertical_2"
         app:layout_constraintTop_toBottomOf="@id/our_courses"/>
+
 
     <!-- Your Progress Title -->
     <TextView
@@ -197,5 +201,27 @@
         android:textColor="@android:color/darker_gray"
         app:layout_constraintStart_toStartOf="@id/progress_title"
         app:layout_constraintTop_toBottomOf="@id/progress_title" />
+
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/bottom_navigation"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="0dp"-->
+<!--        android:background="#CCFDB7"-->
+<!--        app:itemIconTint="#044605"-->
+<!--        app:itemTextColor="#044605"-->
+<!--        app:menu="@menu/bottom_nav_menu"-->
+<!--        app:labelVisibilityMode="labeled"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent" />-->
+
+    <include
+        layout="@layout/bottom_nav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
