@@ -44,7 +44,9 @@ class LoginPage : AppCompatActivity() {
         loginButton.setOnClickListener {
             val intent = when (userType) {
                 "teacher" -> Intent(this, TeacherDashboard::class.java)
-                "student" -> Intent(this, StudentDashboard::class.java)
+                "student" -> Intent(this, MainActivity::class.java).apply {
+                    putExtra("openFragment", "student_dashboard")
+                }
                 else -> null
             }
 
@@ -52,5 +54,6 @@ class LoginPage : AppCompatActivity() {
                 startActivity(it)
             }
         }
+
     }
 }

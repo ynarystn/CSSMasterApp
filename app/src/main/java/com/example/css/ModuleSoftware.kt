@@ -18,14 +18,14 @@ class ModuleSoftware : BottomNav() {
             insets
         }
 
-        setupBottomNavigation()
-
         val backButton = findViewById<ImageButton>(R.id.back_button)
 
-        // Set OnClickListener to navigate to LoginPage
+        // Set OnClickListener to navigate to StudentDashboardFragment
         backButton.setOnClickListener {
-            val intent = Intent(this, StudentDashboard::class.java)
-            startActivity(intent)
+            finish() // Go back to the previous screen
         }
     }
+
+    override fun getLayoutResourceId(): Int = R.layout.activity_module_software
+
 }

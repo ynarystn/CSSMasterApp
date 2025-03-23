@@ -5,47 +5,46 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-open class BottomNav : AppCompatActivity() {
+abstract class BottomNav : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Set up the navigation bar if the layout includes it
         setupBottomNavigation()
     }
+
+    protected abstract fun getLayoutResourceId(): Int
 
     fun setupBottomNavigation() {
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
-        bottomNav?.setOnItemSelectedListener { item ->
+        bottomNav?.setOnItemSelectedListener { item -> // Use ?. to prevent null crash
+            val currentActivity = this::class.java
+
             when (item.itemId) {
                 R.id.nav_modules -> {
-                    if (this !is StudentDashboard) {
-                        startActivity(Intent(this, StudentDashboard::class.java))
-                        overridePendingTransition(0, 0)
+                    if (currentActivity != StudentDashboardFragment::class.java) {
+                        startActivity(Intent(this, StudentDashboardFragment::class.java))
                         finish()
                     }
                     true
                 }
                 R.id.nav_games -> {
-                    if (this !is Games) {
-                        startActivity(Intent(this, Games::class.java))
-                        overridePendingTransition(0, 0)
+                    if (currentActivity != GamesFragment::class.java) {
+                        startActivity(Intent(this, GamesFragment::class.java))
                         finish()
                     }
                     true
                 }
                 R.id.nav_tutorials -> {
-                    if (this !is Tutorials) {
-                        startActivity(Intent(this, Tutorials::class.java))
-                        overridePendingTransition(0, 0)
+                    if (currentActivity != TutorialsFragment::class.java) {
+                        startActivity(Intent(this, TutorialsFragment::class.java))
                         finish()
                     }
                     true
                 }
                 R.id.nav_account -> {
-                    if (this !is Games) {
-                        startActivity(Intent(this, Games::class.java))
-                        overridePendingTransition(0, 0)
+                    if (currentActivity != GamesFragment::class.java) {
+                        startActivity(Intent(this, GamesFragment::class.java))
                         finish()
                     }
                     true
@@ -55,3 +54,4 @@ open class BottomNav : AppCompatActivity() {
         }
     }
 }
+

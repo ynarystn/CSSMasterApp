@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_1"
-    tools:context=".StudentDashboard">
+    tools:context=".StudentDashboardFragment">
 
     <!-- Guidelines for layout structure -->
     <androidx.constraintlayout.widget.Guideline
@@ -202,26 +202,6 @@
         app:layout_constraintStart_toStartOf="@id/progress_title"
         app:layout_constraintTop_toBottomOf="@id/progress_title" />
 
-<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
-<!--        android:id="@+id/bottom_navigation"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginBottom="0dp"-->
-<!--        android:background="#CCFDB7"-->
-<!--        app:itemIconTint="#044605"-->
-<!--        app:itemTextColor="#044605"-->
-<!--        app:menu="@menu/bottom_nav_menu"-->
-<!--        app:labelVisibilityMode="labeled"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent" />-->
 
-    <include
-        layout="@layout/bottom_nav"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

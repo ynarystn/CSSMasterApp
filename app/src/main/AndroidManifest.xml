@@ -19,19 +19,10 @@
             android:name=".TutorialsHardware"
             android:exported="false" />
         <activity
-            android:name=".Tutorials"
-            android:exported="false" />
-        <activity
             android:name=".ModuleSoftware"
             android:exported="false" />
         <activity
-            android:name=".Games"
-            android:exported="false" />
-        <activity
             android:name=".ModuleHardware"
-            android:exported="false" />
-        <activity
-            android:name=".StudentDashboard"
             android:exported="false" />
         <activity
             android:name=".TeacherDashboard"
