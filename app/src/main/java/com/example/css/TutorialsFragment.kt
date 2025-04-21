@@ -21,15 +21,17 @@ class TutorialsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Set OnClickListener to navigate to TutorialsHardware
+        // Hardware card click
         view.findViewById<ImageButton>(R.id.hardware_card).setOnClickListener {
             val intent = Intent(requireContext(), TutorialsHardware::class.java)
+            intent.putExtra("course_type", "hardware") // sending data
             startActivity(intent)
         }
 
-        // Set OnClickListener to navigate to TutorialsSoftware
+        // Software card click
         view.findViewById<ImageButton>(R.id.software_card).setOnClickListener {
             val intent = Intent(requireContext(), TutorialsHardware::class.java)
+            intent.putExtra("course_type", "software") // sending data
             startActivity(intent)
         }
     }

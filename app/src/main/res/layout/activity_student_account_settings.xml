@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_1"
-    tools:context=".GamesFragment">
+    tools:context=".StudentAccountSettings">
 
     <!-- Vertical Guidelines -->
     <androidx.constraintlayout.widget.Guideline
@@ -30,6 +30,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.60" />
+
 
     <!-- Setting Button -->
     <ImageButton
@@ -67,70 +75,69 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logo" />
 
-    <!-- Start Learning -->
-    <ImageView
-        android:id="@+id/start_learning"
+    <!-- Computer Hardware & Components -->
+    <TextView
+        android:id="@+id/account_information"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="Start Learning"
-        android:src="@drawable/start_learning"
+        android:text="Account Information"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:textColor="@color/dark_green"
         app:layout_constraintTop_toBottomOf="@id/css_master"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="11dp"/>
+        android:layout_marginTop="20dp"/>
 
-    <!-- Container for the ImageButtons -->
-    <LinearLayout
-        android:id="@+id/container"
-        android:layout_width="0dp"
+    <!-- Name Text -->
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:scaleType="fitXY"
-        app:layout_constraintTop_toBottomOf="@id/start_learning"
-        app:layout_constraintStart_toStartOf="@id/guideline_vertical"
-        app:layout_constraintEnd_toEndOf="@id/guideline_vertical_2"
-        android:layout_marginTop="45dp"
-        android:gravity="center_horizontal">
+        android:text="Name: "
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/account_information"
+        app:layout_constraintStart_toEndOf="@id/guideline_vertical"
+        android:layout_marginTop="25dp" />
 
-        <!-- Row 1: Comp Repair & Quiz Time (Side by Side) -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:scaleType="fitXY"
-            android:gravity="center">
+    <!-- Email Text -->
+    <TextView
+        android:id="@+id/text_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email Address: "
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/text_name"
+        app:layout_constraintStart_toEndOf="@id/guideline_vertical"
+        android:layout_marginTop="8dp" />
 
-            <!-- Comp Repair Button -->
-            <ImageButton
-                android:id="@+id/btn_comp_repair"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/logo_comp_repair"
-                android:scaleType="fitXY"
-                android:background="@null"
-                android:contentDescription="Computer Repair" />
+    <!-- Switch Account Button -->
+    <ImageButton
+        android:id="@+id/button_switch_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/button_switch_account"
+        android:background="@null"
+        android:contentDescription="Switch Account"
+        app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
 
-            <!-- Quiz Time Button -->
-            <ImageButton
-                android:id="@+id/btn_quiz_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/logo_quiz_time"
-                android:scaleType="fitXY"
-                android:background="@null"
-                android:contentDescription="Quiz Time"/>
-        </LinearLayout>
-
-        <!-- Row 2: Guess CSS (Below the Two Buttons) -->
-        <ImageButton
-            android:id="@+id/btn_guess_css"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/logo_guess_css"
-            android:background="@null"
-            android:contentDescription="Guess CSS"
-            android:layout_marginTop="16dp"/>
-    </LinearLayout>
+    <!-- Logout Button -->
+    <ImageButton
+        android:id="@+id/button_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/button_logout"
+        android:background="@null"
+        android:contentDescription="Logout"
+        app:layout_constraintTop_toBottomOf="@id/button_switch_account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
 
 
 

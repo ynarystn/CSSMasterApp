@@ -3,6 +3,7 @@ package com.example.css
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -23,6 +24,22 @@ class TutorialsHardware : BottomNav() {
         // Set OnClickListener to navigate to TutorialsHardware
         backButton.setOnClickListener {
             finish() // Go back to the previous screen
+        }
+
+        val courseType = intent.getStringExtra("course_type")
+        val hardwareTextView = findViewById<TextView>(R.id.computer_hardware)
+
+        if (courseType == "hardware") {
+            hardwareTextView.text = "Computer Hardware and Components"
+        } else if (courseType == "software") {
+            hardwareTextView.text = "Computer Software and Components"
+        }
+
+        val tutorVideoCard = findViewById<ImageButton>(R.id.tutor_video_card)
+        tutorVideoCard.setOnClickListener {
+            val intent = Intent(this, TutorialsVideoPreview::class.java)
+            intent.putExtra("course_type", courseType) // pass the same info
+            startActivity(intent)
         }
 
     }

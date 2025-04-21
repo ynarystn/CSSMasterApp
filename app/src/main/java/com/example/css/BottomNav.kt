@@ -43,8 +43,8 @@ abstract class BottomNav : AppCompatActivity() {
                     true
                 }
                 R.id.nav_account -> {
-                    if (currentActivity != GamesFragment::class.java) {
-                        startActivity(Intent(this, GamesFragment::class.java))
+                    if (currentActivity != StudentAccountSettings::class.java) {
+                        startActivity(Intent(this, StudentAccountSettings::class.java))
                         finish()
                     }
                     true

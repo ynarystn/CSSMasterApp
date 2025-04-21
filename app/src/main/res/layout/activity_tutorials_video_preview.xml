@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_1"
-    tools:context=".TutorialsHardware">
+    tools:context=".TutorialsVideoPreview">
 
     <!-- Vertical Guidelines -->
     <androidx.constraintlayout.widget.Guideline
@@ -109,6 +109,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="8dp"/>
 
+    <TextView
+        android:id="@+id/text_computer_hardware"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Computer Hardware"
+        android:textSize="22sp"
+        android:textStyle="normal"
+        android:textColor="@color/dark_green"
+        app:layout_constraintTop_toBottomOf="@id/computer_hardware"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
     <!-- Tutor Video ImageButton -->
     <ImageButton
         android:id="@+id/tutor_video_card"
@@ -118,60 +131,22 @@
         android:scaleType="fitXY"
         android:src="@drawable/tutor_video_card"
         android:contentDescription="Tutor Video"
-        app:layout_constraintTop_toBottomOf="@id/computer_hardware"
+        app:layout_constraintTop_toBottomOf="@id/text_computer_hardware"
         app:layout_constraintStart_toStartOf="@id/guideline_vertical"
         app:layout_constraintEnd_toEndOf="@id/guideline_vertical_2"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="20dp"/>
 
-    <!-- Computer Setup Text -->
     <TextView
-        android:id="@+id/cont_watch_title"
+        android:id="@+id/description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:text="Tutorial Title"
+        android:text="Description"
+        android:textSize="16sp"
+        android:textStyle="normal"
         android:textColor="@color/dark_green"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/tutor_video_card"
-        app:layout_constraintStart_toStartOf="@id/tutor_video_card"
-        app:layout_constraintTop_toTopOf="@id/tutor_video_card" />
-
-    <!-- Learn how to .. -->
-    <TextView
-        android:id="@+id/time_duration"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Time duration of the video"
-        android:textColor="#8F928F"
-        android:textSize="11sp"
-        app:layout_constraintStart_toStartOf="@id/cont_watch_title"
-        app:layout_constraintTop_toBottomOf="@id/cont_watch_title" />
-
-    <TextView
-        android:id="@+id/sypnosis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sypnosis of the video"
-        android:textColor="#8F928F"
-        android:textSize="11sp"
-        app:layout_constraintStart_toStartOf="@id/time_duration"
-        app:layout_constraintTop_toBottomOf="@id/time_duration" />
-
-    <ImageButton
-        android:id="@+id/tutor_play_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="15dp"
-        android:background="@null"
-        android:contentDescription="Play Button"
-        android:src="@drawable/tutor_play_button"
-        app:layout_constraintEnd_toEndOf="@id/tutor_video_card"
-        app:layout_constraintTop_toBottomOf="@id/sypnosis"
-        tools:ignore="TouchTargetSizeCheck" />
-
-
+        app:layout_constraintTop_toBottomOf="@id/tutor_video_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,7 +19,7 @@ class StudentDashboardFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Set OnClickListener to navigate to ModuleHardware
-        view.findViewById<ImageButton>(R.id.hardware_card_1).setOnClickListener {
+        view.findViewById<ImageButton>(R.id.hardware_card).setOnClickListener {
             startActivity(Intent(requireContext(), ModuleHardware::class.java))
         }
 

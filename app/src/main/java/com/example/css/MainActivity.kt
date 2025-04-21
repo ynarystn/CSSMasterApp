@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_modules -> replaceFragment(StudentDashboardFragment())
                 R.id.nav_games -> replaceFragment(GamesFragment())
                 R.id.nav_tutorials -> replaceFragment(TutorialsFragment())
-                R.id.nav_account -> replaceFragment(GamesFragment())
+                R.id.nav_account -> replaceFragment(StudentAccountSettings())
             }
             true
         }
